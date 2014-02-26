@@ -21,11 +21,11 @@ namespace com.techphernalia.windows.forms.techieUI
         }
         [Title("MS-PL")]
         [Category("License")]
-        [Description("This application is released under Microsoft Public License(http://opensource.org/licenses/ms-pl.html) , and has learned a lot from other applications released under Microsoft Public License.")]
+        [Description("This application is released under Microsoft Public License(http://opensource.org/licenses/ms-pl.html) , and has learned a lot from other applications released under Microsoft Public License.\n\nHave tried to use UI from : 'LINQ - Sample Queries'(http://code.msdn.microsoft.com/LINQ-Sample-Queries-13a42a54)")]
         public void HelpL000MSPL()
         {
             StreamReader rdr = new StreamReader("resources\\MSPL.txt");
-            Console.WriteLine(rdr.ReadToEnd());
+            Console.WriteLine(rdr.ReadToEnd().Replace("\n",Environment.NewLine));
         }
 
         [Title("Email")]
@@ -65,16 +65,16 @@ namespace com.techphernalia.windows.forms.techieUI
 
         [Title("Stack Exchange")]
         [Category("Contact US")]
-        [Description("You can visit our Github profile at http://stackexchange.com/users/3211800/durgesh-chaudhary?tab=accounts")]
+        [Description("You can visit our Stack Overflow profile at http://stackexchange.com/users/3211800/durgesh-chaudhary?tab=accounts")]
         public void HelpC000SE()
         {
             Process.Start("http://stackexchange.com/users/3211800/durgesh-chaudhary?tab=accounts");
-            Console.WriteLine("Please visit our MSDN Profile at http://stackexchange.com/users/3211800/durgesh-chaudhary?tab=accounts");
+            Console.WriteLine("Please visit our Stack Overflow Profile at http://stackexchange.com/users/3211800/durgesh-chaudhary?tab=accounts");
         }
 
         [Title("How to use")]
         [Category("Help")]
-        [Description("Click Run to know more.\nThis application briefs you on BSON Document used in MongoDB. In coming time it will be updated to include MongoDB tutorials as well. Stay tuned with us.")]
+        [Description("Click Run to know more.\nThis application briefs you on BSON Document used in MongoDB. In coming time it will be updated with more MongoDB tutorials. Stay tuned with us.")]
         public void HelpH000Me()
         {
             StreamReader rdr = new StreamReader("resources\\Help.txt");

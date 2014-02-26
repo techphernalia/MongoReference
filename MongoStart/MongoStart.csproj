@@ -56,15 +56,22 @@
   <ItemGroup>
     <Compile Include="About.cs" />
     <Compile Include="BSONTutorial.cs" />
+    <Compile Include="DeletingDocuments.cs" />
+    <Compile Include="ExportDocuments.cs" />
+    <Compile Include="FindingDocuments.cs" />
     <Compile Include="frmMongoSetup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMongoSetup.Designer.cs">
       <DependentUpon>frmMongoSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportDocuments.cs" />
+    <Compile Include="InsertingDocuments.cs" />
     <Compile Include="MongoData.cs" />
+    <Compile Include="MongoGeneral.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateDocuments.cs" />
     <EmbeddedResource Include="frmMongoSetup.resx">
       <DependentUpon>frmMongoSetup.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +93,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="resources\zipstemp.tsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="resources\zips.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="resources\zipstemp.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\techieUI\techieUI.csproj">

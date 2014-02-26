@@ -89,7 +89,7 @@
             this.txtDatabase.Name = "txtDatabase";
             this.txtDatabase.Size = new System.Drawing.Size(258, 27);
             this.txtDatabase.TabIndex = 5;
-            this.txtDatabase.Text = "techPhernalia";
+            this.txtDatabase.Text = "techphernalia";
             // 
             // btnContinue
             // 

@@ -17,11 +17,20 @@ namespace MongoStart
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMongoSetup());
 
-            List<TreeDataList> tutorials = new List<TreeDataList>();
-            tutorials.Add(new About());
-            tutorials.Add(new BSONTutorial());
+            List<TreeDataList> tutorials = new List<TreeDataList>() 
+            {
+                new About(),
+                new BSONTutorial(),
+                new MongoGeneral(),
+                new FindingDocuments(),
+                new InsertingDocuments(),
+                new DeletingDocuments(),
+                new UpdateDocuments(),
+                new ExportDocuments(),
+                new ImportDocuments(),
+            };
 
-            Application.Run(new frmMain("Learning Mongo the techie way...", tutorials,"C#"));
+            Application.Run(new frmMain("Learning Mongo the techie way...", tutorials, "C#"));
         }
     }
 }
