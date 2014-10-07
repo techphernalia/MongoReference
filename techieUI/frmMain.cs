@@ -52,17 +52,30 @@ namespace com.techphernalia.windows.forms.techieUI
                 txtDescription.Text = _current.Description;
                 if (_current.Method != null)
                     btnRun.Enabled = true;
-                if (_current.Code != null)
-                {
-                    if (_current.Code.Count > 0)
-                    {
-                        cmbLanguage.Enabled = true;
-                        cmbLanguage.DataSource = _current.Code;
-                        var x = from c in _current.Code where c.Lang.ToLower().Equals(PrimaryLanguage.ToLower()) select c;
-                        if (x.Count() > 0)
-                            cmbLanguage.SelectedItem = x.First();
-                    }
-                }
+				if (_current.Code != null)
+				{
+					if (_current.Code.Count > 0)
+					{
+						cmbLanguage.Enabled = true;
+						cmbLanguage.DataSource = _current.Code;
+						var x = from c in _current.Code where c.Lang.ToLower().Equals(PrimaryLanguage.ToLower()) select c;
+						if (x.Count() > 0)
+						{
+							cmbLanguage.SelectedItem = x.First();
+							txtCode.Text = ((CodeBlock)cmbLanguage.SelectedItem).Code;
+						}
+					}
+					else
+					{
+						cmbLanguage.Enabled = false;
+						txtCode.Text = "";
+					}
+				}
+				else
+				{
+					cmbLanguage.Enabled = false;
+					txtCode.Text = "";
+				}
             }
             else
             {
